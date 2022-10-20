@@ -1,0 +1,40 @@
+*{
+  padding: 0;margin: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.con
+{
+  box-shadow: 0 0 2px black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ 
+}
+.con input
+{
+  margin-right: 5vmax;
+}
+
+.maindiv
+{
+   /* border: 2px solid; */
+}
+.inner
+{
+  /* border: 2px solid; */
+
+  margin: 5vmin;
+  box-shadow:  0 0 2px black;
+  padding: 3vmin;
+
+  
+}
+a {
+  color: #00B7FF;
+}

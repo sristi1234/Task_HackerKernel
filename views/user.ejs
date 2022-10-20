@@ -1,0 +1,36 @@
+<%- include('partials/header')%>
+
+<div class="content w-25 con ">
+        <h1>Add User</h1>
+    <form action="/addUser" method="POST">
+      
+        <input class="form-control m-3 w-100" type="text" placeholder="name" name="name" id="">
+        <input class="form-control m-3 w-100" type="email" placeholder="email" name="email" id="">
+         <input class="form-control m-3 w-100" type="number"  placeholder="phone number" name="phone" id="no">
+        
+         <button id="button" class="btn btn-primary">submit</button>
+         <br><br>
+
+    </form>
+</div>
+
+<script>
+    const btn = document.querySelector("#button");
+
+    btn.addEventListener('click',function(event){
+       
+        
+         var mb = document.querySelector('#no');
+        if(mb.value.length !== 10)
+        {
+            event.preventDefault();
+            alert("Please enter valid mobile number")
+        
+        }
+       
+       
+    });
+</script>
+
+<%- include('partials/header')%>
+

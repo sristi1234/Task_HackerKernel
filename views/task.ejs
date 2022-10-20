@@ -1,0 +1,27 @@
+<%- include('partials/header')%>
+
+<div class="content w-50 p-5 con">
+     <h1>Add a task </h1>
+
+    <form action="/addTask" method="POST">
+
+       
+      <select name="username" class="form-control m-3 w-100" id="">
+        <% users.forEach(function(user){ %>
+
+     
+        <option value= <%= user.name  %>  > <%= user.name%></option>
+        <% })%>
+      </select>
+        <input class="form-control m-3 w-100" type="text" placeholder="title of task" name="name" id="">
+        <input <%= task.taskTypes === 'done' ? 'checked' : '' %> class="m-1" type="radio" name="taskTypes" value="done" id="" > done
+        <input <%= task.taskTypes === 'pending' ? 'checked' : '' %> class="m-1" type="radio" name="taskTypes" value="pending" id=""> pending
+
+   
+        <br><br>
+         <button class="btn btn-primary">submit</button>
+
+    </form>
+</div>
+
+<%- include('partials/header')%>

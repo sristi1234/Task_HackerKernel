@@ -13,8 +13,17 @@
    </div>
    <div class="w-50 inner">
     <h4>Get excel sheet</h4>
-    <a href="/sheet">click here </a>
+    <a class="tag" href="/sheet">click here </a>
 </div>
      
     </div>
+    <script>
+   
+       var tag = document.querySelector(".tag");
+
+       tag.addEventListener('click', function(){
+        alert("excel sheets are created");
+       })
+
+    </script>
     <%- include('partials/footer')%>

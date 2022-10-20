@@ -161,7 +161,9 @@ router.get('/sheet', function(req, res, next) {
   })
   res.redirect('/');
   })
-  .catch()
+  .catch((err)=>{
+    res.send(err);
+  })
  });
 
 

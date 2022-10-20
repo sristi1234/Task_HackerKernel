@@ -121,12 +121,14 @@ router.get('/sheet', function(req, res, next) {
        )
         }
        workbook1.xlsx.writeFile('users.xlsx').then((data)=>{
-              res.redirect("/")
-       }).catch((err)=>{
-        console.log("user " + err)
+          
+       })
+       .catch((err)=>{
+        res.send(err);
        })
      })
    })
+
    count = 1;
    task.findAll().then((task)=>{
      task.forEach((task)=>{
@@ -145,15 +147,21 @@ router.get('/sheet', function(req, res, next) {
          )
           }
          workbook2.xlsx.writeFile('task.xlsx').then((data)=>{
-           res.redirect("/")
-         }).catch((err)=>{
-          console.log("task " +err)
+         
+          // console.log("task " +err)
          })
        })
+      
      })
+     
    })
-  
+   .catch((err)=>{
+    res.send(err);
+
   })
+  res.redirect('/');
+  })
+  .catch()
  });
 
 
